@@ -1,0 +1,1 @@
+This plugin integrates YOLO (You Only Look Once) object detection models with SAHI (Slice Aided Hyper Inference) from Ultralytics to detect and classify palm trees in large raster images directly within QGIS.
