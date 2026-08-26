@@ -59,7 +59,7 @@ QGIS Profile
 
 ### 3. Install Python Libraries
 
-Open OSGeo4W Shell inside QGIS folder and install:
+Open OSGeo4W Shell from the QGIS installation folder and install the required Python libraries:
 
 ```bash
 pip install rasterio==1.3.10
@@ -67,14 +67,21 @@ pip install geopandas==0.14.0
 pip install sahi==0.11.18
 pip install shapely==2.0.5
 pip install ultralytics==8.4.128
-
-pip uninstall torchvision torch torchaudio
-
-Install pytorch, https://pytorch.org/get-started/locally/
 ```
 
-Restart QGIS.
+After installing the required libraries, remove the existing PyTorch packages:
+```bash
+pip uninstall torchvision torch torchaudio
+```
+> **Note:** This step is to prevent PyTorch conflicts in the QGIS Python environment that may cause NVIDIA GPU acceleration to be unavailable
 
+After uninstalling the existing PyTorch packages, install PyTorch according to your operating system and available hardware (CPU or NVIDIA CUDA).
+
+Please follow the official PyTorch installation instructions:
+
+[PyTorch — Get Started Locally](https://pytorch.org/get-started/locally/)
+
+Finally, **restart QGIS**.
 
 ### 3. Enable Plugin
 
